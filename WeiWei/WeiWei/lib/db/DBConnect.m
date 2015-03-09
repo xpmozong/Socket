@@ -8,7 +8,7 @@
 
 #import "DBConnect.h"
 #import "FMDB.h"
-#define SQLNAME @"leiren.sqlite"
+#define SQLNAME @"mytable.sqlite"
 
 @implementation DBConnect
 
@@ -25,7 +25,7 @@ static DBConnect *dBHandle;
 
 + (NSString *)bundleSQLPath
 {
-    return [[NSBundle mainBundle] pathForResource:@"leiren" ofType:@"sqlite"];
+    return [[NSBundle mainBundle] pathForResource:@"mytable" ofType:@"sqlite"];
 }
 
 /// 打开数据库
