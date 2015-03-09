@@ -1,0 +1,119 @@
+//
+//  LeftImageTableViewCell.m
+//  BDMapDemo
+//
+//  Created by tw001 on 14-9-29.
+//  Copyright (c) 2014年 ESX. All rights reserved.
+//
+
+#import "LeftImageTableViewCell.h"
+
+@implementation LeftImageTableViewCell
+
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        _bgImageView.frame = CGRectMake(0, 0, 95, 95);
+        
+        _picView = [[UIView alloc] initWithFrame:CGRectMake(62, 12.5, 66, 85)];
+        [self.contentView addSubview:_picView];
+        
+        _picImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _picView.frame.size.width, 66)];
+        _picImageView.image = [UIImage imageNamed:@"liaotian_anxia(66-66)"];
+        [_picView addSubview:_picImageView];
+        
+        _picImageView.userInteractionEnabled = YES;
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(clickPic:)];
+        longPress.minimumPressDuration = 1.0;
+        [_picImageView addGestureRecognizer:longPress];
+        
+        _tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, _picImageView.frame.size.height, _picView.frame.size.width, 20)];
+        _tipLabel.textAlignment = NSTextAlignmentCenter;
+        _tipLabel.text = @"长按可查看图片";
+        _tipLabel.font = [UIFont systemFontOfSize:9.0f];
+        _tipLabel.backgroundColor = [UIColor clearColor];
+        [_picView addSubview:_tipLabel];
+        
+        _progressLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, _picView.frame.size.width, _picView.frame.size.height - 5)];
+        _progressLabel.backgroundColor = [UIColor colorWithRed:233/255.0 green:233/255.0 blue:233/255.0 alpha:1];
+        _progressLabel.text = @"0%";
+        _progressLabel.textAlignment = NSTextAlignmentCenter;
+        [_picView addSubview:_progressLabel];
+        
+        _destoryImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _picView.frame.size.width, 66)];
+        _destoryImageView.image = [UIImage imageNamed:@"xiaoxi_xiaohui(38-38)"];
+        [_picView addSubview:_destoryImageView];
+        
+        _picLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, _destoryImageView.frame.size.height, _picView.frame.size.width, 20)];
+        _picLabel.backgroundColor = [UIColor clearColor];
+        _picLabel.textAlignment = NSTextAlignmentCenter;
+        _picLabel.font = [UIFont systemFontOfSize:12.0f];
+        _picLabel.text = @"已销毁";
+        [_picView addSubview:_picLabel];
+    }
+    
+    return self;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+}
+
+- (void)awakeFromNib {
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+/// 设置消息内容
+- (void)setMsgContent:(MsgObject *)msgObj
+{
+    if (msgObj.download_progress < 100) {
+        _progressLabel.hidden = NO;
+        _picImageView.hidden = YES;
+        _tipLabel.hidden = YES;
+        _progressLabel.text = [NSString stringWithFormat:@"%d%%", msgObj.download_progress];
+        _destoryImageView.hidden = YES;
+        _picLabel.hidden = YES;
+    }else{
+        if (msgObj.destroy_image_time > 0) {
+            _picImageView.hidden = NO;
+            _destoryImageView.hidden = YES;
+            _picLabel.hidden = YES;
+            _tipLabel.hidden = NO;
+            _progressLabel.hidden = YES;
+        }else{
+            _picImageView.hidden = YES;
+            _destoryImageView.hidden = NO;
+            _picLabel.hidden = NO;
+            _tipLabel.hidden = YES;
+            _progressLabel.hidden = YES;
+        }
+    }
+}
+
+/// 获得高度
++ (float)getMsgHeight:(MsgObject *)msgObj
+{
+    return 100.0f;
+}
+
+/// 点击图片
+- (void)clickPic:(UILongPressGestureRecognizer *)ges
+{
+    if (ges.state == 1) {
+        [_delegate lookImage:_rowIndex];
+    }
+    if (ges.state == 3) {
+        [_delegate destroyImage:_rowIndex];
+    }
+}
+
+@end

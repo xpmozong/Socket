@@ -1,0 +1,40 @@
+//
+//  LeftImageTableViewCell.h
+//  BDMapDemo
+//
+//  Created by tw001 on 14-9-29.
+//  Copyright (c) 2014年 ESX. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "LeftTableViewCell.h"
+
+@protocol LeftImageTableViewCellDelegate <NSObject>
+
+@optional
+/// 重新发送消息
+- (void)resendMsg:(int)rowIndex;
+/// 查看图片
+- (void)lookImage:(int)rowIndex;
+/// 销毁图片
+- (void)destroyImage:(int)rowIndex;
+@end
+
+@interface LeftImageTableViewCell : LeftTableViewCell
+
+@property (assign, nonatomic) int rowIndex;
+@property (strong, nonatomic) UIView *picView;
+@property (strong, nonatomic) UILabel *progressLabel;
+@property (strong, nonatomic) UIImageView *picImageView;
+@property (strong, nonatomic) UILabel *tipLabel;
+@property (strong, nonatomic) UIImageView *destoryImageView;
+@property (strong, nonatomic) UILabel *picLabel;
+@property (assign, nonatomic) id<LeftImageTableViewCellDelegate>delegate;
+
+/// 设置消息内容
+- (void)setMsgContent:(MsgObject *)msgObj;
+
+/// 获得高度
++ (float)getMsgHeight:(MsgObject *)msgObj;
+
+@end
