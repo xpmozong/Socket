@@ -142,7 +142,6 @@
 		716F5B6D1A31E9CE0096F6A8 /* t_char.c in Sources */ = {isa = PBXBuildFile; fileRef = 716F5A5A1A31E9CD0096F6A8 /* t_char.c */; };
 		716F5B6E1A31E9CE0096F6A8 /* t_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 716F5A5C1A31E9CD0096F6A8 /* t_time.c */; };
 		716F5B6F1A31E9CE0096F6A8 /* DBConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 716F5A601A31E9CD0096F6A8 /* DBConnect.m */; };
-		716F5B701A31E9CE0096F6A8 /* leiren.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 716F5A611A31E9CD0096F6A8 /* leiren.sqlite */; };
 		716F5B711A31E9CE0096F6A8 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 716F5A641A31E9CD0096F6A8 /* FMDatabase.m */; };
 		716F5B721A31E9CE0096F6A8 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 716F5A661A31E9CD0096F6A8 /* FMDatabaseAdditions.m */; };
 		716F5B731A31E9CE0096F6A8 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 716F5A681A31E9CD0096F6A8 /* FMDatabasePool.m */; };
@@ -225,6 +224,7 @@
 		716F5C491A31EAC30096F6A8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716F5C481A31EAC30096F6A8 /* QuartzCore.framework */; };
 		716F5C4B1A31EACC0096F6A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716F5C4A1A31EACC0096F6A8 /* CoreLocation.framework */; };
 		716F5C4F1A31EBDC0096F6A8 /* PublicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 716F5C4E1A31EBDC0096F6A8 /* PublicTableViewCell.m */; };
+		71A228591AADA279005CFF23 /* mytable.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 71A228581AADA279005CFF23 /* mytable.sqlite */; };
 		71BFF3951917A8B800ADF843 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BFF3941917A8B800ADF843 /* Foundation.framework */; };
 		71BFF3971917A8B800ADF843 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BFF3961917A8B800ADF843 /* CoreGraphics.framework */; };
 		71BFF3991917A8B800ADF843 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BFF3981917A8B800ADF843 /* UIKit.framework */; };
@@ -418,7 +418,6 @@
 		716F5A5D1A31E9CD0096F6A8 /* t_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = t_time.h; sourceTree = "<group>"; };
 		716F5A5F1A31E9CD0096F6A8 /* DBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConnect.h; sourceTree = "<group>"; };
 		716F5A601A31E9CD0096F6A8 /* DBConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnect.m; sourceTree = "<group>"; };
-		716F5A611A31E9CD0096F6A8 /* leiren.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = leiren.sqlite; sourceTree = "<group>"; };
 		716F5A631A31E9CD0096F6A8 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		716F5A641A31E9CD0096F6A8 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		716F5A651A31E9CD0096F6A8 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -526,6 +525,7 @@
 		716F5C4A1A31EACC0096F6A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		716F5C4D1A31EBDC0096F6A8 /* PublicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicTableViewCell.h; sourceTree = "<group>"; };
 		716F5C4E1A31EBDC0096F6A8 /* PublicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicTableViewCell.m; sourceTree = "<group>"; };
+		71A228581AADA279005CFF23 /* mytable.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mytable.sqlite; sourceTree = "<group>"; };
 		71BFF3911917A8B800ADF843 /* WeiWei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiWei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BFF3941917A8B800ADF843 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		71BFF3961917A8B800ADF843 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -831,7 +831,7 @@
 			children = (
 				716F5A5F1A31E9CD0096F6A8 /* DBConnect.h */,
 				716F5A601A31E9CD0096F6A8 /* DBConnect.m */,
-				716F5A611A31E9CD0096F6A8 /* leiren.sqlite */,
+				71A228581AADA279005CFF23 /* mytable.sqlite */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -1274,6 +1274,7 @@
 				716F5B811A31E9CE0096F6A8 /* blackArrow.png in Resources */,
 				7102CEB71A552479007141EB /* face_100.png in Resources */,
 				71BFF3A71917A8B800ADF843 /* Images.xcassets in Resources */,
+				71A228591AADA279005CFF23 /* mytable.sqlite in Resources */,
 				7102CE8C1A552479007141EB /* face_057.png in Resources */,
 				716F5C131A31E9CE0096F6A8 /* failue@2x.png in Resources */,
 				716F5C311A31E9CE0096F6A8 /* my@2x.png in Resources */,
@@ -1380,7 +1381,6 @@
 				7102CE6E1A552479007141EB /* face_027.png in Resources */,
 				7102CEB01A552479007141EB /* face_093.png in Resources */,
 				7102CEB61A552479007141EB /* face_099.png in Resources */,
-				716F5B701A31E9CE0096F6A8 /* leiren.sqlite in Resources */,
 				716F5C321A31E9CE0096F6A8 /* recommend@2x.png in Resources */,
 				7102CE5E1A552479007141EB /* face_011.png in Resources */,
 				7102CE991A552479007141EB /* face_070.png in Resources */,
